@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    margin-top: 100px;
+    padding:50px;
+}
+
+.form{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+    width: 80%;
+}
+
+.input{
+
+width: 80%;
+padding: 10px 20px;
+}
+
+.btn-addtask{
+    text-align: center;
+    border: 1px solid black;
+    width: 20%;
+    background-color: rgb(116, 148, 218); 
+    color: white;
+    border-radius: 5px;
+}
+
+.itemList{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: aliceblue;
+    justify-content: space-between;
+    width: 100%;
+    width: 80%;
+    margin-top: 20px;
+        align-self: center;
+}
+
+.btn-items{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+
+
+}
+.btn-compelted{
+    padding: 5px 10px;
+    border: 1px solid black;
+     background-color: rgb(161, 161, 219); 
+    color: white;
+    border-radius: 5px;
+
+
+}
+
+.btn-delete{
+
+    padding: 5px 10px;
+    border: 1px solid black;
+     background-color: rgb(144, 144, 228); 
+    color: white;
+    border-radius: 5px;
+}
+.completed{
+  text-decoration: line-through;
+}
