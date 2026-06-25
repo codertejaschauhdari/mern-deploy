@@ -1,6 +1,8 @@
 import "./index.css"
 import { useEffect, useState } from "react";
 import axios from "axios";
+//import dotenv from "dotenv"
+
 
 function App() {
   const [todo, setTodo] = useState("");
@@ -11,7 +13,7 @@ function App() {
     if (!todo.trim()) return  
     try {
       const newTodo = {text : todo, completed:false}
-      const response = await axios.post("/todo/post",newTodo)
+      const response = await axios.post(`/todo/post`,newTodo)
       console.log("response:",response)
       setCollection((prev)=> [...prev,response.data.todo])
     } catch (error) {
@@ -53,7 +55,7 @@ function App() {
 
   const fetchTodos = async()=>{
     try {
-      const result = await axios.get("/todo");
+      const result = await axios.get(`/todo`);
       const data = result.data;
 
       setCollection(data)

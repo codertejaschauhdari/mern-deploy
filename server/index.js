@@ -3,6 +3,7 @@ const {connectMongoDb} = require("./connection")
 const dotenv = require("dotenv")
 const todo = require("./models/todo.models")
 const todoRouter = require("./routes/todo.routes")
+const path = require("path")
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ connectMongoDb(process.env.MONGO_URI)
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
+app.use(express.static(path.join(__dirname,"dist")))
 
 
 //Routes
