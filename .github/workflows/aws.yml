@@ -44,12 +44,14 @@ jobs:
 
           script: |
 
-            cd ~/tejas-project/mern-deploy/server/
+            cd ~/tejas-project/mern-deploy/
 
             git pull origin main
 
+            cd client/  && npm install && npm run build && cp -r dist/ ../server/dist/
+
+            cd ../server
+
             npm install
 
-            npm run build
-
-            pm2 restart all
+            npm run dev
