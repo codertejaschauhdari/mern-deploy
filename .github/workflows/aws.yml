@@ -51,7 +51,7 @@ jobs:
 
           script: |
 
-            cd tejas-project/mern-deploy
+            cd ~/tejas-project/mern-deploy/server/
 
             git pull origin main
 
