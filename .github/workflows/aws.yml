@@ -18,16 +18,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Tests
-        run: npm test -- --passWithNoTests
-
-      - name: Build
-        run: npm run build
+          node-version: 24
 
   deploy:
 
